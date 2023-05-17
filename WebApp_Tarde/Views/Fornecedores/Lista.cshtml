@@ -1,0 +1,111 @@
+﻿<div class="card">
+
+    <div class="card-header">
+        <h2 style="color:black">Lista de Fornecedores</h2>
+    </div>
+
+    <div class="card-body">
+        <div class="row">
+            <div class="col-2">
+                <a href="/Fornecedores/Cadastro" class="btn btn-success"> Novo Fornecedor </a>
+            </div>
+
+            <div class="col-3">
+                <select name="Filtro" class="form-control">
+                    <option value="0">Todos os campos</option>
+                    <option value="id">Por id</option>
+                    <option value="nome">Por nome</option>
+                    <option value="telefone">Por telefone</option>
+
+                </select>
+            </div>
+
+            <div class="col-5">
+                <input type="text" name="busca" class="form-control" />
+            </div>
+
+
+            <div class="col-2">
+                <button class="btn btn-primary" type="submit">Pesquisar</button>
+            </div>
+        </div>
+
+        <table class="table" style="color:black">
+
+
+            <thead>
+                <tr>
+                    <td>Codigo</td>
+                    <td>Nome da Empresa</td>
+                    <td>Telefone</td>
+                    
+                    </td>
+                </tr>
+
+
+            </thead>
+
+
+            <tbody>
+                <tr>
+
+                    <td>1</td>
+                    <td>Arthur</td>
+                    <td>654654654</td>
+                    <td>
+                        <a href="/Fornecedores/Editar/1" class="btn btn-warning"> Editar</a>
+                        <a href="/Fornecedores/Excluir/1" class="btn btn-danger"> Excluir</a>
+                        <a href="/Fornecedores/Compras/1" class="btn btn-info"> Lista de compras</a>
+                    </td>
+                </tr>
+
+                <tr>
+
+                    <td>2</td>
+                    <td>Dougrax</td>
+                    <td>5646434849</td>
+                    <td>
+                        <a href="/Fornecedores/Editar/2" class="btn btn-warning"> Editar</a>
+                        <a href="/Fornecedores/Excluir/2" class="btn btn-danger"> Excluir</a>
+                        <a href="/Fornecedores/Compras/2" class="btn btn-info"> Lista de compras</a>
+                    </td>
+
+                </tr>
+
+                <tr>
+
+                    <td>3</td>
+                    <td>Felca</td>
+                    <td>5464645346</td>
+                    <td>
+                        <a href="/Fornecedores/Editar/3" class="btn btn-warning"> Editar</a>
+                        <a href="/Fornecedores/Excluir/3" class="btn btn-danger"> Excluir</a>
+                        <a href="/Fornecedores/Compras/3" class="btn btn-info"> Lista de compras</a>
+                    </td>
+
+                </tr>
+
+                <tr>
+
+                    <td>4</td>
+                    <td>Jazz</td>
+                    <td>5498454654</td>
+                    <td>
+                        <a href="/Fornecedores/Editar/4" class="btn btn-warning"> Editar</a>
+                        <a href="/Fornecedores/Excluir/4" class="btn btn-danger"> Excluir</a>
+                        <a href="/Fornecedores/Compras/4" class="btn btn-info"> Lista de compras</a>
+                    </td>
+
+                </tr>
+
+            </tbody>
+
+
+
+
+
+
+        </table>
+
+    </div>
+</div>

@@ -1,0 +1,74 @@
+﻿@model WebApp_Tarde.Models.NovoProdutoViewModel
+
+
+<body style="background-color: black">
+
+    <div class="row">
+
+        <div class="col-4">
+        </div>
+
+
+        <div class="col-4">
+            <div class="card">
+                <div class="card-header">
+                    <center style="color:black"><h1>Cadastro de Produtos</h1></center>
+                </div>
+
+                <div class="card-body">
+
+                    <form action="/Produtos/Cadastro" method="post">
+                        <label style="color:black">Nome do Produto</label>
+                        <input type="text" name="nome" class="form-control" />
+                        <br />
+
+                        <label style="color:black">Preço</label>
+                        <input type="text" name="preço" class="form-control" />
+                        <br />
+
+                        <center>
+                            <button type="submit" class="btn btn-success">
+                                Salvar Produto
+                            </button>
+                        </center>
+
+                        <label>Descrição</label>
+                        <input name="Descricao" type="text"/>
+
+                        <br />
+
+                        <label>Categoria</label>
+                        <select name="CategoriaId">
+                            @foreach (var categoria in Model.Lista_Categorias)
+                            {
+                                <option value="@categoria.Id">@categoria.Nome</option>
+                            }
+                        </select>
+                        <br />
+                        <label>Ativo</label>
+                        <select name="Ativo">
+                            <option value="true">Ativo</option>
+                            <option value="false">Inativo</option>
+                        </select>
+
+                        <button type="submit">foda-se</button>
+
+
+
+
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-4">
+        </div>
+
+
+
+
+
+    </div>
+
+</body>

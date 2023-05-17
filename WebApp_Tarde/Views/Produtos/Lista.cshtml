@@ -1,0 +1,122 @@
+﻿<div class="card">
+
+    <div class="card-header">
+        <h2 style="color:black">Lista de Produtos</h2>
+    </div>
+
+    <div class="card-body">
+        <div class="row">
+            <div class="col-2">
+                <a href="/Fornecedores/Cadastro" class="btn btn-success"> Novo Produto </a>
+            </div>
+
+            <div class="col-3">
+                <select name="Filtro" class="form-control">
+                    <option value="0">Todos os campos</option>
+                    <option value="id">Por id</option>
+                    <option value="nome">Por nome</option>
+                    <option value="preço">Por Preço</option>
+
+                </select>
+            </div>
+
+            <div class="col-5">
+                <input type="text" name="busca" class="form-control" />
+            </div>
+
+
+            <div class="col-2">
+                <button class="btn btn-primary" type="submit">Pesquisar</button>
+            </div>
+        </div>
+
+        <table class="table" style="color:black">
+
+
+            <thead>
+                <tr>
+                    <td>Codigo</td>
+                    <td>Nome do Produto</td>
+                    <td>Preço</td>
+
+                    </td>
+                </tr>
+
+
+            </thead>
+
+
+            <tbody>
+                <tr>
+
+                    <td>1</td>
+                    <td>Computador</td>
+                    <td>R$ 5.000,00</td>
+                    <td>
+                        <a href="/Produtos/Editar/1" class="btn btn-warning"> Editar</a>
+                        <a href="/Produtos/Excluir/1" class="btn btn-danger"> Excluir</a>
+                    
+                    </td>
+                </tr>
+
+                <tr>
+
+                    <td>2</td>
+                    <td>Mouse</td>
+                    <td>R$ 500,00</td>
+                    <td>
+                        <a href="/Produtos/Editar/2" class="btn btn-warning"> Editar</a>
+                        <a href="/Produtos/Excluir/2" class="btn btn-danger"> Excluir</a>
+                    </td>
+
+                </tr>
+
+                <tr>
+
+                    <td>3</td>
+                    <td>Teclado</td>
+                    <td>R$ 460,00</td>
+                    <td>
+                        <a href="/Produtos/Editar/3" class="btn btn-warning"> Editar</a>
+                        <a href="/Produtos/Excluir/3" class="btn btn-danger"> Excluir</a>
+                    </td>
+
+                </tr>
+
+                <tr>
+
+                    <td>4</td>
+                    <td>Fone de Ouvido</td>
+                    <td>R$ 120,00</td>
+                    <td>
+                        <a href="/Produtos/Editar/4" class="btn btn-warning"> Editar</a>
+                        <a href="/Produtos/Excluir/4" class="btn btn-danger"> Excluir</a>
+                    </td>
+
+                </tr>
+
+                @foreach (var produto in Model)
+                {
+                    <tr>
+                        <td>@produto.Id</td>
+                        <td>@produto.Descricao</td>
+                        <td>R$ @produto.Valor</td>
+                        <td>@produto.Categoria.Nome</td>
+                        <td>
+                            <a href="/Produtos/editar/@produto.Id">Editar</a>
+                            <a href="/Produtos/excluir/@produto.Id">Excluir</a>
+                        </td>
+                    </tr>
+                }
+
+            </tbody>
+
+
+
+
+
+
+        </table>
+
+    </div>
+</div>
